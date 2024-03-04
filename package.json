@@ -1,0 +1,25 @@
+{
+  "name": "api-my-secret",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migration:make": "npx tsx ./node_modules/knex/bin/cli.js migrate:make",
+    "migration:latest": "npx tsx ./node_modules/knex/bin/cli.js migrate:latest",
+    "migration:rollback": "npx tsx ./node_modules/knex/bin/cli.js migrate:rollback",
+    "dev": "NODE_ENV=development tsx --watch src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "pg": "^8.11.3"
+  }
+}
