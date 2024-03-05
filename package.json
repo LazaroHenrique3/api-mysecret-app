@@ -7,7 +7,7 @@
     "migration:make": "npx tsx ./node_modules/knex/bin/cli.js migrate:make",
     "migration:latest": "npx tsx ./node_modules/knex/bin/cli.js migrate:latest",
     "migration:rollback": "npx tsx ./node_modules/knex/bin/cli.js migrate:rollback",
-    "dev": "NODE_ENV=development tsx --watch src"
+    "dev": "set NODE_ENV=development && tsx --watch src"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +18,13 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-async-errors": "^3.1.1",
     "knex": "^3.1.0",
     "pg": "^8.11.3"
   }
