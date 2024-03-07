@@ -2,12 +2,12 @@ import UUIDGenerator from "./UUIDGenerator";
 
 export default class AnswerEntity {
     constructor(
-        answerId: string,
-        questionId: string,
-        userId: string | null,
-        answer: string,
-        createdAt: Date,
-        updatedAt: Date | null
+        readonly answerId: string,
+        readonly questionId: string,
+        readonly userId: string | null,
+        readonly answer: string,
+        readonly createdAt: Date,
+        readonly updatedAt: Date | null
     ) { }
 
     static create(questionId: string, userId: string | null, annswer: string): AnswerEntity {

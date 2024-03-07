@@ -19,4 +19,8 @@ export default class AnswerDAO implements DAO<AnswerModel> {
         if (!data) return null;
         return data;
     }
+
+    async list(questionId: string): Promise<AnswerModel[]> {
+        return await this.connection<AnswerModel>(this.tableName).where({ questionId })
+    }
 }
